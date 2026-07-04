@@ -1,0 +1,13 @@
+{
+  "name": "ai-alumni-platform",
+  "version": "1.0.0",
+  "description": "A simple alumni platform with a static frontend and a basic backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

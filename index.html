@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni Connect</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="site-navbar navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-custom" href="#">Alumni Connect</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container py-5 position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="eyebrow">AI Alumni Platform</span>
+          <h1 class="display-4 fw-bold mb-3">Stay connected. Grow together.</h1>
+          <p class="lead mb-4">Discover mentors, find opportunities, join events, and build lasting alumni relationships in one place.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#events" class="btn btn-brand">Explore Events</a>
+            <a href="#about" class="btn btn-outline-brand">Learn More</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-card float-anim">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h5 class="mb-0">Your network, amplified</h5>
+              <span class="match-score">98% active</span>
+            </div>
+            <div class="match-row">
+              <div class="avatar-circle">RS</div>
+              <div>
+                <div class="fw-semibold">Ritika Sharma</div>
+                <small class="text-soft">Mentor · Product & AI</small>
+              </div>
+            </div>
+            <div class="match-row">
+              <div class="avatar-circle">KV</div>
+              <div>
+                <div class="fw-semibold">Karan Verma</div>
+                <small class="text-soft">Engineering Leader</small>
+              </div>
+            </div>
+            <div class="match-row">
+              <div class="avatar-circle">PN</div>
+              <div>
+                <div class="fw-semibold">Priya Nair</div>
+                <small class="text-soft">Design Mentor</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg id="hero-network" class="mt-4" width="100%" height="280"></svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="card-soft p-4 h-100">
+              <div class="icon-tile mb-3"><i class="bi bi-person-lines-fill"></i></div>
+              <h4>Connect</h4>
+              <p class="text-soft">Meet alumni from your batch and industry to create meaningful professional relationships.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="card-soft p-4 h-100">
+              <div class="icon-tile mb-3"><i class="bi bi-briefcase-fill"></i></div>
+              <h4>Grow</h4>
+              <p class="text-soft">Explore job openings, mentorship opportunities, and career guidance shared by the community.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="card-soft p-4 h-100">
+              <div class="icon-tile mb-3"><i class="bi bi-calendar-event"></i></div>
+              <h4>Belong</h4>
+              <p class="text-soft">Join events, workshops, and alumni meetups that keep your network active and alive.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="py-5 bg-blue-light">
+      <div class="container">
+        <div class="section-heading text-center mb-4 reveal">
+          <span class="eyebrow">Upcoming</span>
+          <h2 class="fw-bold">Featured events</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="card-soft p-4 h-100">
+              <span class="tag-pill mb-3">Networking</span>
+              <h5>Alumni Mixer</h5>
+              <p class="text-soft">Meet peers, share ideas, and build long-term connections.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="card-soft p-4 h-100">
+              <span class="tag-pill mb-3">Career</span>
+              <h5>Resume Clinic</h5>
+              <p class="text-soft">Learn how to present yourself confidently for interviews and internships.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="card-soft p-4 h-100">
+              <span class="tag-pill mb-3">Mentorship</span>
+              <h5>Ask an Expert</h5>
+              <p class="text-soft">Get advice from alumni who have walked the same path before you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <h4 class="fw-bold text-white">Alumni Connect</h4>
+          <p class="mb-0">A welcoming space for alumni to stay in touch and support each other.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="login.html" class="btn btn-brand me-2">Login</a>
+          <a href="register.html" class="btn btn-outline-brand">Register</a>
+        </div>
+      </div>
+      <div class="footer-bottom mt-4 text-center">
+        © 2026 Alumni Connect. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbarScroll();
+      initScrollReveal();
+      drawNetworkField('hero-network', 28);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Alumni Connect</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .chat-container {
+            height: 500px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .message {
+            margin-bottom: 15px;
+        }
+        .message.sent {
+            text-align: right;
+        }
+        .message.sent .bubble {
+            background: var(--blue);
+            color: white;
+            border-radius: 12px 12px 0 12px;
+        }
+        .message.received .bubble {
+            background: white;
+            color: var(--ink);
+            border-radius: 12px 12px 12px 0;
+            border: 1px solid var(--border);
+        }
+        .bubble {
+            display: inline-block;
+            padding: 10px 15px;
+            max-width: 70%;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="site-navbar navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="index.html">Alumni Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mentorship.html">Mentorship</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chatbot.html">Chat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chat Container -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row h-100">
+                <!-- Sidebar - Conversations -->
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-bottom">
+                            <h5 class="mb-0">Messages</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    <h6 class="mb-1">Support Bot</h6>
+                                    <small class="text-muted">How can I help?</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <h6 class="mb-1">John Doe</h6>
+                                    <small class="text-muted">See you at the event!</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <h6 class="mb-1">Sarah Johnson</h6>
+                                    <small class="text-muted">Thanks for connecting</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Area -->
+                <div class="col-md-9">
+                    <div class="card border-0 shadow-sm h-100 d-flex flex-column">
+                        <!-- Chat Header -->
+                        <div class="card-header bg-white border-bottom">
+                            <h5 class="mb-0">Support Bot</h5>
+                            <small class="text-muted">Online</small>
+                        </div>
+
+                        <!-- Chat Messages -->
+                        <div class="chat-container flex-grow-1">
+                            <div class="message received">
+                                <div class="bubble">Hello! I'm here to help. How can I assist you today?</div>
+                            </div>
+                            <div class="message sent">
+                                <div class="bubble">Hi! I'm looking for mentorship opportunities.</div>
+                            </div>
+                            <div class="message received">
+                                <div class="bubble">Great! I can help you find a mentor. What field are you interested in?</div>
+                            </div>
+                            <div class="message sent">
+                                <div class="bubble">I'm interested in AI and Machine Learning.</div>
+                            </div>
+                            <div class="message received">
+                                <div class="bubble">Perfect! We have several mentors in that field. Would you like me to show you their profiles?</div>
+                            </div>
+                        </div>
+
+                        <!-- Message Input -->
+                        <div class="card-footer bg-white border-top">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-end-0" placeholder="Type your message..." id="messageInput">
+                                <button class="btn btn-primary" type="button" id="sendBtn">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Alumni Connect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('sendBtn').addEventListener('click', function() {
+            const input = document.getElementById('messageInput');
+            if (input.value.trim()) {
+                // Add message to chat
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

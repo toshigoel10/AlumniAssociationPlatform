@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Alumni Connect</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="auth-shell">
+        <aside class="auth-visual">
+            <div>
+                <a class="navbar-brand-custom text-white" href="index.html"><span class="node-mark">●</span> Alumni Connect</a>
+                <h1 class="display-5 fw-bold mt-4 mb-3">Join the alumni network.</h1>
+                <p class="mb-4">Create your account to access career opportunities, mentorship, and community events.</p>
+                <ul class="list-unstyled small mb-0">
+                    <li class="mb-2"><span class="me-2">✓</span>Build a stronger professional profile</li>
+                    <li class="mb-2"><span class="me-2">✓</span>Connect with alumni from your field</li>
+                    <li><span class="me-2">✓</span>Stay informed about upcoming events</li>
+                </ul>
+            </div>
+            <div class="small text-white-50">Join thousands of alumni across India</div>
+        </aside>
+
+        <section class="auth-form-side">
+            <div class="auth-card">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold mb-2">Create Account</h2>
+                    <p class="text-soft mb-0">Set up your profile and start connecting today.</p>
+                </div>
+
+                <form id="registerForm" novalidate>
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label-brand">Full Name</label>
+                        <input type="text" class="form-control form-control-brand" id="fullname" name="fullname" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label-brand">Email Address</label>
+                        <input type="email" class="form-control form-control-brand" id="email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="batch" class="form-label-brand">Batch Year</label>
+                        <input type="number" class="form-control form-control-brand" id="batch" name="batch" placeholder="e.g., 2020">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label-brand">Password</label>
+                        <input type="password" class="form-control form-control-brand" id="password" name="password" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirm_password" class="form-label-brand">Confirm Password</label>
+                        <input type="password" class="form-control form-control-brand" id="confirm_password" name="confirm_password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-brand w-100">Register</button>
+                    <div class="form-feedback mt-3 fw-semibold"></div>
+                </form>
+
+                <hr class="my-4">
+
+                <p class="text-center mb-0">
+                    Already have an account? <a href="login.html" class="text-blue fw-semibold">Login here</a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
